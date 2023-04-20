@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20230111 12:26:19.022" rpa="false" schemaversion="3">
+<suite id="s1" name="DigitalProducts" source="C:\Users\LionelMambingo\Documents\Gozem automation\DigitalProducts.robot">
+<test id="s1-t1" name="Scan a digital product" line="11">
+<kw name="Log" library="BuiltIn">
+<arg>my test</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230111 12:26:19.153" level="INFO">my test</msg>
+<status status="PASS" starttime="20230111 12:26:19.153" endtime="20230111 12:26:19.153"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=${platformName}</arg>
+<arg>deviceName=${device-id}</arg>
+<arg>appPackage=com.gozem.merchant.test</arg>
+<arg>appActivity=com.gozem.merchant.view.ui.activity.SplashScreenActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<msg timestamp="20230111 12:26:21.173" level="INFO">Could not connect to port 4723 on host localhost</msg>
+<msg timestamp="20230111 12:26:21.173" level="INFO">Could not get IP address for host: localhost</msg>
+<msg timestamp="20230111 12:26:25.266" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABDB1455A0&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /wd/hub/session</msg>
+<msg timestamp="20230111 12:26:29.362" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABDB146080&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /wd/hub/session</msg>
+<msg timestamp="20230111 12:26:33.472" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABDB1463B0&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /wd/hub/session</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230111 12:26:37.562" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230111 12:26:37.562" endtime="20230111 12:26:37.562"/>
+</kw>
+<msg timestamp="20230111 12:26:37.562" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230111 12:26:37.572" level="FAIL">MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABDB146500&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée'))</msg>
+<status status="FAIL" starttime="20230111 12:26:19.153" endtime="20230111 12:26:37.572"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>Allow</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.572" endtime="20230111 12:26:37.572"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>Allow</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.572" endtime="20230111 12:26:37.572"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.EditText[contains(@resource-id, 'com.gozem.merchant.test:id/etEmail')]</arg>
+<arg>timeout=20</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.572" endtime="20230111 12:26:37.572"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>//android.widget.EditText[contains(@resource-id, 'com.gozem.merchant.test:id/etEmail')]</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.572" endtime="20230111 12:26:37.572"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@resource-id,'com.gozem.merchant.test:id/btnSignIn')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.572" endtime="20230111 12:26:37.572"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.EditText[contains(@resource-id,'com.gozem.merchant.test:id/etPassword')]</arg>
+<arg>timeout=6</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.577" endtime="20230111 12:26:37.577"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>//android.widget.EditText[contains(@resource-id,'com.gozem.merchant.test:id/etPassword')]</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.577" endtime="20230111 12:26:37.577"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@resource-id,'com.gozem.merchant.test:id/btnConfirm')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.578" endtime="20230111 12:26:37.578"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.TextView[contains(@text, "Alerte")]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.578" endtime="20230111 12:26:37.578"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>ALLOW</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.578" endtime="20230111 12:26:37.578"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, 'While using the app')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.578" endtime="20230111 12:26:37.578"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>While using the app</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.578" endtime="20230111 12:26:37.578"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.FrameLayout[contains(@index, '6')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.578" endtime="20230111 12:26:37.578"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.FrameLayout[contains(@index, '6')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.578" endtime="20230111 12:26:37.578"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, 'Fermer')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.578" endtime="20230111 12:26:37.578"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>Fermer</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.578" endtime="20230111 12:26:37.582"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.ImageView[contains(@resource-id, 'com.gozem.merchant.test:id/ivScan')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.582" endtime="20230111 12:26:37.582"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, 'While using the app')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.582" endtime="20230111 12:26:37.582"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>While using the app</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.582" endtime="20230111 12:26:37.582"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, 'Allow')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.582" endtime="20230111 12:26:37.582"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>Allow</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.582" endtime="20230111 12:26:37.582"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, 'Ok')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.582" endtime="20230111 12:26:37.582"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>Ok</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.582" endtime="20230111 12:26:37.582"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.TextView[contains(@text, "Scanner le code")]</arg>
+<arg>timeout=8</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230111 12:26:37.582" endtime="20230111 12:26:37.582"/>
+</kw>
+<status status="FAIL" starttime="20230111 12:26:19.152" endtime="20230111 12:26:37.582">MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABDB146500&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée'))</status>
+</test>
+<status status="FAIL" starttime="20230111 12:26:19.022" endtime="20230111 12:26:37.582"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="DigitalProducts">DigitalProducts</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230111 12:26:25.266" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABDB1455A0&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /wd/hub/session</msg>
+<msg timestamp="20230111 12:26:29.362" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABDB146080&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /wd/hub/session</msg>
+<msg timestamp="20230111 12:26:33.472" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001ABDB1463B0&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /wd/hub/session</msg>
+<msg timestamp="20230111 12:26:37.562" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

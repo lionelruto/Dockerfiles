@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20230112 14:28:41.288" rpa="false" schemaversion="3">
+<suite id="s1" name="dynamicSectionOptimisation" source="C:\Users\LionelMambingo\Documents\Gozem automation\projects\dynamicSectionOptimisation.robot">
+<test id="s1-t1" name="open food service" line="15">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=${platformName}</arg>
+<arg>deviceName=${device-id}</arg>
+<arg>appPackage=com.gozem</arg>
+<arg>appActivity=com.elluminati.eber.SplashScreenActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20230112 14:28:41.591" endtime="20230112 14:28:51.348"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, "Allow")]</arg>
+<arg>timeout=60</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230112 14:28:51.351" endtime="20230112 14:28:52.340"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>Allow</arg>
+<doc>Click button</doc>
+<msg timestamp="20230112 14:28:52.391" level="INFO">'Allow'.</msg>
+<msg timestamp="20230112 14:28:52.436" level="INFO">Clicking element 'Allow'.</msg>
+<status status="PASS" starttime="20230112 14:28:52.340" endtime="20230112 14:28:52.466"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, "AUTORISER")]</arg>
+<arg>timeout=20</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230112 14:28:52.466" endtime="20230112 14:28:57.705"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>AUTORISER</arg>
+<doc>Click button</doc>
+<msg timestamp="20230112 14:28:57.763" level="INFO">'AUTORISER'.</msg>
+<msg timestamp="20230112 14:28:57.800" level="INFO">Clicking element 'AUTORISER'.</msg>
+<status status="PASS" starttime="20230112 14:28:57.707" endtime="20230112 14:28:57.840"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, 'While using the app')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230112 14:28:57.841" endtime="20230112 14:28:58.976"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>While using the app</arg>
+<doc>Click button</doc>
+<msg timestamp="20230112 14:28:59.039" level="INFO">'While using the app'.</msg>
+<msg timestamp="20230112 14:28:59.086" level="INFO">Clicking element 'While using the app'.</msg>
+<status status="PASS" starttime="20230112 14:28:58.976" endtime="20230112 14:28:59.136"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230112 14:29:05.151" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20230112 14:28:59.136" endtime="20230112 14:29:05.151"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>//android.widget.EditText[contains(@resource-id, 'com.gozem:id/etContactNumber')]</arg>
+<arg>${number}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230112 14:29:05.154" level="INFO">Typing text '696360062' into text field '//android.widget.EditText[contains(@resource-id, 'com.gozem:id/etContactNumber')]'</msg>
+<status status="PASS" starttime="20230112 14:29:05.153" endtime="20230112 14:29:05.387"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.TextView[contains(@resource-id, 'com.gozem:id/btnSignIn')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230112 14:29:05.390" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id, 'com.gozem:id/btnSignIn')]'.</msg>
+<status status="PASS" starttime="20230112 14:29:05.388" endtime="20230112 14:29:06.182"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.EditText[contains(@resource-id,'com.gozem:id/etPassword')]</arg>
+<arg>timeout=6</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230112 14:29:06.182" endtime="20230112 14:29:07.641"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>//android.widget.EditText[contains(@resource-id,'com.gozem:id/etPassword')]</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230112 14:29:07.641" level="INFO">Typing text 'Lionelruto20' into text field '//android.widget.EditText[contains(@resource-id,'com.gozem:id/etPassword')]'</msg>
+<status status="PASS" starttime="20230112 14:29:07.641" endtime="20230112 14:29:07.767"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@resource-id,'com.gozem:id/btnConfirm')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230112 14:29:07.783" level="INFO">Clicking element '//android.widget.Button[contains(@resource-id,'com.gozem:id/btnConfirm')]'.</msg>
+<status status="PASS" starttime="20230112 14:29:07.767" endtime="20230112 14:29:08.403"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>9</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230112 14:29:17.415" level="INFO">Slept 9 seconds</msg>
+<status status="PASS" starttime="20230112 14:29:08.403" endtime="20230112 14:29:17.415"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.TextView[contains(@text, "e-commerce test")]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230112 14:29:17.415" level="INFO">Clicking element '//android.widget.TextView[contains(@text, "e-commerce test")]'.</msg>
+<status status="PASS" starttime="20230112 14:29:17.415" endtime="20230112 14:29:17.958"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.TextView[contains(@resource-id,'com.gozem:id/tvTitle')]</arg>
+<arg>timeout=6</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230112 14:29:17.958" endtime="20230112 14:29:23.718"/>
+</kw>
+<status status="PASS" starttime="20230112 14:28:41.591" endtime="20230112 14:29:23.718"/>
+</test>
+<status status="PASS" starttime="20230112 14:28:41.301" endtime="20230112 14:29:23.734"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="dynamicSectionOptimisation">dynamicSectionOptimisation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
